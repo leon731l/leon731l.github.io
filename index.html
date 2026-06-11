@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#b91c1c">
+  <meta name="robots" content="noindex,nofollow">
+  <title>TH Leistungsnachweis – Quiz</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>TH Leistungsnachweis</h1>
+      <p>Fragenkomplex 1 · Karteikarten-Quiz</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="installBox" class="install hidden">
+      <strong>App installieren:</strong>
+      <span>Über Browser-Menü „Zum Home-Bildschirm hinzufügen“.</span>
+      <button id="installBtn" type="button" class="hidden">Installieren</button>
+    </section>
+
+    <section class="toolbar">
+      <button id="modeAll" type="button" class="primary">Alle Fragen</button>
+      <button id="modeReview" type="button">Unsicher + falsch</button>
+      <button id="modeWrong" type="button">Nur falsch</button>
+    </section>
+
+    <section class="stats" aria-label="Fortschritt">
+      <div><strong id="knownCount">0</strong><span>Gewusst</span></div>
+      <div><strong id="unsureCount">0</strong><span>Unsicher</span></div>
+      <div><strong id="wrongCount">0</strong><span>Falsch</span></div>
+      <div><strong id="stackCount">30</strong><span>Im Stapel</span></div>
+    </section>
+
+    <div class="progress"><div id="progressBar"></div></div>
+
+    <section class="card" aria-live="polite">
+      <div class="cardTop">
+        <span id="cardNumber">Karte 1 / 30</span>
+        <span id="cardStatus">Noch nicht bewertet</span>
+      </div>
+
+      <div id="question" class="question"></div>
+
+      <p class="hint">Antwort laut sagen. Dann erst kontrollieren.</p>
+
+      <button id="showAnswer" type="button" class="primary big">Antwort zeigen</button>
+
+      <div id="answer" class="answer hidden"></div>
+
+      <div class="rating">
+        <button id="markWrong" type="button" class="bad">Falsch</button>
+        <button id="markUnsure" type="button" class="unsure">Gewusst, aber unsicher</button>
+        <button id="markKnown" type="button" class="good">Gewusst</button>
+      </div>
+
+      <div class="nav">
+        <button id="prev" type="button">← Zurück</button>
+        <button id="next" type="button" class="primary">Weiter →</button>
+      </div>
+    </section>
+
+    <section class="jump">
+      <h2>Karte direkt wählen</h2>
+      <div id="jumpGrid" class="jumpGrid"></div>
+    </section>
+
+    <section class="actions">
+      <button id="shuffle" type="button">Stapel mischen</button>
+      <button id="reset" type="button" class="bad">Fortschritt löschen</button>
+    </section>
+
+    <footer>
+      Private Lernhilfe zum Fragenkomplex 1 – Technische Hilfe Leistungsnachweis.
+      Fragen und Antworten wurden originalgetreu aus dem bereitgestellten Fragenkomplex übernommen.
+    </footer>
+  </main>
+
+  <noscript>
+    <main class="wrap">
+      <section class="card">
+        Diese App benötigt JavaScript. Bitte die Seite direkt im Browser öffnen, nicht in einer Dateivorschau.
+      </section>
+    </main>
+  </noscript>
+
+  <script src="app.js"></script>
+</body>
+</html>
