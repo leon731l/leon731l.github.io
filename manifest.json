@@ -1,7 +1,7 @@
 {
   "name": "TH Leistungsnachweis Quiz",
   "short_name": "TH Quiz",
-  "description": "Karteikarten-Quiz für Fragenkomplex 1 Technische Hilfe Leistungsnachweis.",
+  "description": "Karteikarten-Quiz für Bronze, Silber und Gold im Technische Hilfe Leistungsnachweis.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
